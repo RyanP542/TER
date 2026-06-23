@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Strasbourg</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header>
+                <h1>Atlas des conditions d'accès à vélo</h1>
+                <h2>Modélisation par le ressenti dans l'Eurométropole de Strasbourg</h2>
+                <p>Cet atlas interactif évalue les conditions d'accès à vélo vers différentes destinations dans une zone centrale de 4 km autour de la cathédrale. Plutôt que de se limiter au chemin le plus court, cet outil intègre le ressenti direct des cyclistes issus de la plateforme pédaleurs-pédaleuses. </p>
+            </header>
+
+            <div class="control-group">
+                <label for="select-trajet">SÉLECTION DU TRAJET</label>
+                <select id="select-trajet">
+                    <option value="Trajet_gare_campus">Gare Centrale → Campus Esplanade</option>
+                    <option value="Trajet_kleber_orangerie">Kléber → Orangerie</option>
+                    <option value="Trajet_neudorf_krutenau">Neudorf → Krutenau</option>
+                    <option value="Trajet_nord_sud">Axe Nord-Sud</option>
+                    <option value="Trajet_est_ouest">Axe Est-Ouest</option>
+                    <option value="Trajet_schirmek_canal">porte de Schirmek → porte du canal </option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>CRITÈRE D'EXIGENCE (ALPHA)</label>
+                <div class="alpha-selector">
+                    <button class="btn-alpha active" data-alpha="0">
+                        <span>Plus court chemin</span>
+                        <span class="alpha-val">α=0</span>
+                    </button>
+                    <button class="btn-alpha" data-alpha="2">
+                        <span>Compromis</span>
+                        <span class="alpha-val">α=2</span>
+                    </button>
+                    <button class="btn-alpha" data-alpha="4">
+                        <span>meilleur ressenti</span>
+                        <span class="alpha-val">α=4</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-panel">
+                <label>Statistiques du trajet</label>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span id="dist-val" class="stat-value">-- km</span>
+                        <span class="stat-label">DISTANCE</span>
+                    </div>
+                    <div class="stat-card">
+                        <span id="time-val" class="stat-value">-- min</span>
+                        <span class="stat-label">POURCENTAGE DE DETOUR</span>
+                    </div>
+                    <div class="stat-card">
+                    <span id="note-val" class="stat-value">-- / 5 </span>
+                    <span class="stat-label">NOTE RESSENTI</span>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="sidebar-footer">
+                <span>Données : pédaleurs-pédaleuses </span>
+            </footer>
+        </aside>
+        <main id="map"></main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
