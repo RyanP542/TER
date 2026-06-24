@@ -30,26 +30,26 @@ body {
 }
 
 header h1 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 8px;
 }
 
 header h2 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 16px;
 }
 
 header p {
-    font-size: 18px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.4;
 }
 
 label {
     display: block;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.1em;
     color: rgba(255, 255, 255, 0.5);
@@ -64,7 +64,7 @@ select {
     border-radius: 8px;
     padding: 12px;
     color: #fff;
-    font-size: 20px;
+    font-size: 14px;
     cursor: pointer;
     outline: none;
 }
@@ -92,7 +92,7 @@ select:focus {
     align-items: center;
     cursor: pointer;
     transition: all 0.2s ease;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .btn-alpha:hover {
@@ -106,7 +106,7 @@ select:focus {
 }
 
 .alpha-val {
-    font-size: 18px;
+    font-size: 14px;
     opacity: 0.6;
     font-family: monospace;
 }
@@ -128,13 +128,13 @@ select:focus {
 
 .stat-value {
     display: block;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 4px;
 }
 
 .stat-label {
-    font-size: 15px;
+    font-size: 13px;
     color: rgba(255, 255, 255, 0.4);
 }
 
